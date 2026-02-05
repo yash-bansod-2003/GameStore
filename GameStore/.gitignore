@@ -1,0 +1,47 @@
+## .NET / Visual Studio
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.pdb
+*.cache
+*.log
+
+## ASP.NET Core
+wwwroot/lib/
+appsettings.*.json
+!appsettings.json
+
+## Rider / VS Code
+.idea/
+.vscode/
+
+## OS / tooling
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+## NuGet
+*.nupkg
+**/packages/
+**/PackageReferenceAssemblies/
+
+## Test results
+TestResults/
+*.trx
+coverage*
+
+## User-specific files
+*.rsuser
+*.user
+*.sln.iml
