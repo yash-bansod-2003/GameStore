@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddValidation();
 
-var connectionString = "Date Source=GameStrore.db";
+var connectionString = "Data Source=GameStore.db";
 
 builder.Services.AddSqlite<GameStoreContext>(connectionString);
 
