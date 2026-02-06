@@ -44,4 +44,23 @@ app.MapPost("/", (CreateGameDto newGame) =>
   return Results.Created($"/{game.Id}", game);
 });
 
+app.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
+{
+  var index = games.FindIndex(g => g.Id == id);
+  if (index == -1)
+  {
+    return Results.NotFound();
+  }
+  var updatedGameDto = new GameDto
+  {
+    Id = id,
+    Title = updatedGame.Title,
+    Genre = updatedGame.Genre,
+    Price = updatedGame.Price,
+    ReleaseDate = updatedGame.ReleaseDate
+  };
+  games[index] = updatedGameDto;
+  return Results.Ok(updatedGameDto);
+});
+
 app.Run();
