@@ -13,3 +13,21 @@ Content-Type: application/json
   "price": 59.99,
   "releaseDate": "2024-01-01"
 }
+
+###
+GET {{DotNetWebApi_HostAddress}}/1
+Accept: application/json
+
+###
+PUT {{DotNetWebApi_HostAddress}}/1
+Content-Type: application/json
+
+{
+  "title": "Updated Game",
+  "genre": "Adventure",
+  "price": 49.99,
+  "releaseDate": "2024-02-01"
+}
+
+###
+DELETE {{DotNetWebApi_HostAddress}}/1
