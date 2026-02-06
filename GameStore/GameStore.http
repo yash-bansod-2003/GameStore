@@ -1,10 +1,10 @@
 @DotNetWebApi_HostAddress = http://localhost:5089
 
-GET {{DotNetWebApi_HostAddress}}/
+GET {{DotNetWebApi_HostAddress}}/games
 Accept: application/json
 
 ###
-POST {{DotNetWebApi_HostAddress}}/
+POST {{DotNetWebApi_HostAddress}}/games
 Content-Type: application/json
 
 {
@@ -15,11 +15,11 @@ Content-Type: application/json
 }
 
 ###
-GET {{DotNetWebApi_HostAddress}}/1
+GET {{DotNetWebApi_HostAddress}}/games/1
 Accept: application/json
 
 ###
-PUT {{DotNetWebApi_HostAddress}}/1
+PUT {{DotNetWebApi_HostAddress}}/games/1
 Content-Type: application/json
 
 {
@@ -30,4 +30,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{DotNetWebApi_HostAddress}}/1
+DELETE {{DotNetWebApi_HostAddress}}/games/1
