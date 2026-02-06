@@ -37,11 +37,6 @@ public class GamesEndpoints
 
     group.MapPost("/", (CreateGameDto newGame) =>
     {
-      if (string.IsNullOrEmpty(newGame.Title))
-      {
-        return Results.BadRequest("Title is required.");
-      }
-
       var game = new GameDto
       {
         Id = games.Count + 1,
