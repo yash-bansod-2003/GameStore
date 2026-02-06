@@ -24,4 +24,24 @@ List<GameDto> games = [
 
 app.MapGet("/", () => games);
 
+app.MapGet("/{id}", (int id) =>
+{
+  var game = games.FirstOrDefault(g => g.Id == id);
+  return game is not null ? Results.Ok(game) : Results.NotFound();
+});
+
+app.MapPost("/", (CreateGameDto newGame) =>
+{
+  var game = new GameDto
+  {
+    Id = games.Count + 1,
+    Title = newGame.Title,
+    Genre = newGame.Genre,
+    Price = newGame.Price,
+    ReleaseDate = newGame.ReleaseDate
+  };
+  games.Add(game);
+  return Results.Created($"/{game.Id}", game);
+});
+
 app.Run();

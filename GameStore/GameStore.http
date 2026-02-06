@@ -1,0 +1,15 @@
+@DotNetWebApi_HostAddress = http://localhost:5089
+
+GET {{DotNetWebApi_HostAddress}}/
+Accept: application/json
+
+###
+POST {{DotNetWebApi_HostAddress}}/
+Content-Type: application/json
+
+{
+  "title": "New Game",
+  "genre": "Action",
+  "price": 59.99,
+  "releaseDate": "2024-01-01"
+}
